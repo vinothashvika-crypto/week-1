@@ -1,0 +1,22 @@
+/**
+ * Week 1 Practice 5 - Reverse Customer Name (The Customer Identity Verification System)
+ */
+public class P5_ReverseCustomerName {
+
+    // Builds the reversed name without changing the original string
+    static String reverseCustomerName(String customerName) {
+        char[] characters = customerName.toCharArray();
+        StringBuilder reversed = new StringBuilder();
+        for (int i = characters.length - 1; i >= 0; i--) {
+            reversed.append(characters[i]);
+        }
+        return reversed.toString();
+    }
+
+    public static void main(String[] args) {
+        String customerName = "Sunil";
+        String reversedName = reverseCustomerName(customerName);
+        System.out.println("Original Name: " + customerName);
+        System.out.println("Reversed Name: " + reversedName);
+    }
+}
